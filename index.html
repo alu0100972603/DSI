@@ -1,47 +1,65 @@
-<!DOCTYPE HTML>
-    <html>
-        
-        <head>
-            <title> FastFood </title>
-            <img src="./img/images.jpeg">
-            <meta charset="utf-8">
-            <!-- JavaScript -->
-            <script type="text/javascript" language="javascript" src="./javascripts/validar_index.js"></script>
-        </head>
-        
-        <body>
-            <h1> FAST FOOD </h1>
-            <h2> La comida nunca fue tan rápida </h2>
-            <p> Siéntate, realiza tu pedido con FAST FOOD y ¡listo! Sin esperas. </p>
-            <p> Pide y paga únicamente utilizando tu smartphone.</p>
-            
-            <h3> Ya tengo cuenta </h3>
-            
-            <form action="/my-handling-form-page" method="GET" name="Formulario"  onsubmit="return validate_form()">
-                <div>
-                    <label for="Nombre">Nombre:</label>
-                    <input type="text" id="name" />
-                </div>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+		<meta charset="utf-8">
+	</head>
+	
+	<body>
+	    <nav>
+	        <div class="nav-wrapper">
+	            <a href="#" class="brand-logo"> FastFood</a>
+	            <ul id="nav-movile" class="right hide-on-med-and-down">
+	                <li><a  href="contacto.html">Contactos </a></li>
+	        </div>
+	      </nav>
+	      
+	      
+	        <div class="container">
+	            <div class="row">
+                    <div class="col s6"><span class="flow-text">
+	            
+        	            <span class="black-text text-darken-2">
+            	            <h2> La comida nunca fue tan rápida </h2>
+                            <p> Siéntate, realiza tu pedido con FAST FOOD y ¡listo! Sin esperas. </p>
+                            <p> Pide y paga únicamente utilizando tu smartphone.</p>
+                        </span>
+                    </span></div>
+                    
+                    <div class="col s1"><span class="flow-text">
+                    </span></div>
+                    
                 
-                <div>
-                    <label for="Correo">Correo:</label>
-                    <input type="email" id="mail" />
-                </div>
-                
-                <div>
-                    <label for="Password">Contraseña:</label>
-                    <input type="Password" id="Password" />
-                </div>
-                
-                <input type="submit" value="Entrar">
-            </form>
-            
-            <h3>¿Aún no tienes cuenta? </h3>
-            <a class="nav-item nav-link" href="registro.html"><button class="btn btn-outline-secondary" type="button">Quiero registrarme</button></a>
-            
-            <br/><br/><br/>
-            
-            <a class="nav-item nav-link" href="contacto.html"><button class="btn btn-outline-secondary" type="button">¡Síguenos!</button></a>
-        </body>
-        
-    </html>
+                    <div class="col s5"><span class="flow-text">
+                        <div class="row">
+                            <form class="col s12">
+                                <h3> Iniciar sesión </h3>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                          <input id="email" type="email" class="validate">
+                                          <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                         <input id="password" type="password" class="validate">
+                                         <label for="password">Password</label>
+                                    </div>
+                                </div>
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Iniciar sesion
+                                    <i class="material-icons right"></i>
+                              </button>
+                            </form>
+                          </div>
+                      <h3> Crear cuenta </h3>
+                        <a class="nav-item nav-link" href="registro.html">
+                              <button class="btn waves-effect waves-light" type="submit" name="action">Crear
+                                <i class="material-icons right"></i>
+                              </button>
+                        </a>
+                      </span></div>
+              </div>
+              </div>
+	</body>
+</html>
