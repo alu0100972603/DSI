@@ -3,52 +3,129 @@
         <head> 
             <title> Registro - FastFood </title>
             <meta charset="utf-8">
-            <!-- JavaScript -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
             <script type="text/javascript" language="javascript" src="./javascripts/validar_registro.js"></script>
         </head>
         
         <body>
-            <h3> Crear una cuenta </h3>
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">FastFood</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="index.html">Log in</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                  </ul>
+                </div>
+             </nav>
 
-            <form action="/my-handling-form-page" method="GET" name="Formulario"  onsubmit="return validate_form()">
+            <div class=container>
+                <!-- Título de la página -->
+                <div class="row">
+                    <div class="col s12"><span class=flow-text>
+                        <h1> Tu cuenta en FastFood </h1>    
+                    </span></div>
+                    
+                </div>                 
                 
-                <div>
-                    <label for="Nombre">Nombre:</label>
-                    <input type="text" id="name" />
-                </div>
-                
-                <div>
-                    <label for="Correo">E-mail:</label>
-                    <input type="email" id="mail" />
-                </div>
-            
-                <div>
-                    <label for="Password">Contraseña:</label>
-                    <input type="Password" id="Password" />
-                </div>
-            
-                <div>
-                    <label for="Repetir Password">Repite la contraseña:</label>
-                    <input type="Password" id="Repetir_Password" />
-                </div>
-            
-                <br/>
-                
-                <fieldset>
-                    <legend>¿Eres alérgico a algo?</legend>
-                    <p> Los alimentos que contengan los alérgenos que has seleccionado no aparecerán en el menú (lo podrás modificar después) </p>
-                        <input type="checkbox" name="alergeno" value="Gluten" /> Gluten <br />
-                        <input type="checkbox" name="alergeno" value="Crustaceos" /> Crustáceos <br />
-                        <input type="checkbox" name="alergeno" value="Huevo" /> Huevo <br />
-                        <input type="checkbox" name="alergeno" value="Pescado" /> Pescado <br />
-                        <input type="checkbox" name="alergeno" value="Cacahuetes" /> Cacahuetes <br />
-                        <input type="checkbox" name="alergeno" value="Soja" /> Soja <br />
-                        <input type="checkbox" name="alergeno" value="Lácteos" /> Lácteos <br />
-                        <input type="checkbox" name="alergeno" value="Frutos secos" /> Frutos secos <br />
+                <!-- Formulario -->
+                <div class="row">
+                    
+                    <form action="/my-handling-form-page" method="GET" name="registro"  onsubmit="return validate_form()">
                         
-                </fieldset>
-                
-                <input type="submit" value="¡Listo!">
-            </form>
+                        <div class=row>
+                            
+                            <!-- Información personal -->
+                            <div class="col s5"><span class="flow-text">
+                            
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="nombre" type="text" class="validate">
+                                        <label for="first_name">Nombre</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="email" type="email" class="validate">
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="password" type="password" class="validate">
+                                        <label for="password">Contraseña</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="Repetir_Password" type="password" class="validate">
+                                        <label for="password">Repite la constraseña</label>
+                                    </div>
+                                </div>
+                                
+                            </span></div>
+                            
+                            <div class="col s1"><span class="flow-text"> </span></div>
+                            
+                            <!-- Alérgenos -->
+                            <div class="col s6"><span class="flow-text"> 
+                                <h4>¿Eres alérgico a algo?</h4>
+                                <p> Los alimentos con alguno de los alérgenos que selecciones no se mostrarán en el menú</p>
+                                <div class=row>
+                                    <div class="col s6"><span class="flow-text">
+                                        <label>
+                                            <input type="checkbox" name="alergeno" value="gluten" />
+                                            <span> Gluten </span>
+                                        </label><br>
+                                        <label>
+                                            <input type="checkbox" name="alergeno" value="crustaceos" />
+                                            <span> Curstáceos </span>
+                                        </label><br>
+                                        <label>
+                                            <input type="checkbox" name="alergeno" value="gluten" />
+                                            <span> Huevo </span>
+                                        </label><br>
+                                        <label>
+                                            <input type="checkbox" name="alergeno" value="pescado" />
+                                            <span> Pescado </span>
+                                        </label><br>
+                                    </span></div>
+                                        
+                                        <div class="col s6"><span class="flow-text">
+                                            <label>
+                                                <input type="checkbox" name="alergeno" value="cacahuetes" />
+                                                <span> Cacahuetes </span>
+                                            </label><br>
+                                            <label>
+                                                <input type="checkbox" name="alergeno" value="soja" />
+                                                <span> Soja </span>
+                                            </label><br>
+                                            <label>
+                                                <input type="checkbox" name="alergeno" value="lacteos" />
+                                                <span> Lácteos </span>
+                                            </label><br>
+                                            <label>
+                                                <input type="checkbox" name="alergeno" value="frutossecos" />
+                                                <span> Frutos secos </span>
+                                            </label><br>
+                                        </span></div>
+                                    </div>
+                            </span> </div>
+                        
+                        </div>
+                        
+                        <!-- Botón enviar -->
+                        <div class=row>
+                            <div class="col s2 offset-s5"><span class="flow-text">
+                                <a class="waves-effect waves-light btn-large">¡Listo!</a>
+                            </span></div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
         </body>
         </html>
