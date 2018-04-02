@@ -4,63 +4,58 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 		<script type="text/javascript" language="javascript" src="javascripts/validar_index.js"></script>
+		<link rel="stylesheet" href="css/style.css">
 		<meta charset="utf-8">
 	</head>
 	
 	<body>
-	    <nav>
-	        <div class="nav-wrapper yellow darken-4">
-	            <a href="#" class="brand-logo"> FastFood</a>
-	            <ul id="nav-movile" class="right hide-on-med-and-down">
-	                <li><a  href="contacto.html">Contacto </a></li>
-	        </div>
-	      </nav>
-	      
-	      
-	        <div class="container">
-	            <div class="row">
-                    <div class="col s6"><span class="flow-text">
-	 
-        	            <span class="black-text text-darken-2">
-            	            <h2> La comida nunca fue tan rápida </h2>
-                            <p> Siéntate, realiza tu pedido con FAST FOOD y ¡listo! Sin esperas. </p>
-                            <p> Pide y paga únicamente utilizando tu smartphone.</p>
-                        </span>
-                    </span></div>
-                    
-                    <div class="col s1"><span class="flow-text">
-                    </span></div>
-                    
-                
-                    <div class="col s5"><span class="flow-text">
-                            <form method="GET" name="Formulario"  onsubmit="return validate_form()">
-                                <h3> Iniciar sesión </h3>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                          <input id="mail" type="email" class="validate">
-                                          <label for="mail">Email</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                         <input id="Password" type="password" class="validate">
-                                         <label for="Password">Password</label>
-                                    </div>
-                                </div>
-                                <button class="btn waves-effect yellow darken-3" type="submit" name="action">Iniciar sesion
-                                    <i class="material-icons right"></i>
-                                </button>
-                            </form>
-                          
-                        <h3> Registrarse </h3>
-                        <a class="nav-item nav-link" href="registro.html">
-                            <button class="btn waves-effect yellow darken-3" type="submit">Crear cuenta
-                                <i class="material-icons right"></i>
-                            </button>
-                        </a>
-                    </span></div>
-                    
-                </div>
+        <nav>
+            <div class="nav-wrapper yellow darken-4">
+                <a href="#" class="brand-logo"> FastFood</a>
+                <ul id="nav-movile" class="right hide-on-med-and-down">
+                <li><a  href="contacto.html">Contacto </a></li>
             </div>
+        </nav>
+        
+    
+    <div class="row contenido">
+        
+        <div class="col s4 presentacion offset-s1"><span class="flow-text">
+            <span class="black-text text-darken-2">
+                <h2> La comida nunca fue tan rápida </h2>
+                <p> Siéntate, realiza tu pedido con FAST FOOD y ¡listo! Sin esperas. </p>
+                <p> Pide y paga únicamente utilizando tu smartphone.</p>
+            </span>
+        </span></div>
+        
+        <div class="col s3 offset-s3 forms"><span class="flow-text">
+                <form method="GET" name="Formulario"  onsubmit="return validate_form()">
+                    <h3> Iniciar sesión </h3>
+                    <div class="row">
+                        <div class="input-field col s12">
+                              <input id="mail" type="email" class="validate">
+                              <label for="mail">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                             <input id="Password" type="password" class="validate">
+                             <label for="Password">Password</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect yellow darken-3" type="submit" name="action">Iniciar sesion
+                        <i class="material-icons right"></i>
+                    </button>
+                </form>
+              
+            <h3> Registrarse </h3>
+            <a class="nav-item nav-link" href="registro.html">
+                <button class="btn waves-effect yellow darken-3" type="submit">Crear cuenta
+                    <i class="material-icons right"></i>
+                </button>
+            </a>
+        </span></div>
+            
+    </div>
 	</body>
 </html>
