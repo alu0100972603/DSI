@@ -21,3 +21,10 @@ body{
 .presentacion{
     margin-top:20px;
 }
+
+.contacto{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
