@@ -12,7 +12,7 @@
         <body>
             <nav>
                 <div class="nav-wrapper yellow darken-4">
-                    <a href="index.html" class="brand-logo">FastFood</a>
+                    <a href="index.html" class="brand-logo"> FastFood</a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="index.html">Log in</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
@@ -21,7 +21,7 @@
             </nav>
 
             <div class=container>
-                <!-- Título de la página -->
+                <!-- TÃ­tulo de la pÃ¡gina -->
                 <div class="row">
                     <div class="col s12"><span class=flow-text>
                         <h1> Tu cuenta en FastFood </h1>    
@@ -32,30 +32,30 @@
                 <!-- Formulario -->
                 <div class="row">
                     
-                    <form method="GET" name="Formulario"  onsubmit="return validate_form()">
+                    <form action="insertar.php" method="post" name="Formulario"  onsubmit="return validate_form()">
                         
                         <div class=row>
                             
-                            <!-- Información personal -->
+                            <!-- InformaciÃ³n personal -->
                             <div class="col s5"><span class="flow-text">
                                 
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input id="name" type="text" class="validate">
+                                        <input id="name" name="name_" type="text" class="validate">
                                         <label for="name">Nombre</label>
                                     </div>
                                 </div>
                                 
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input id="mail" type="email" class="validate">
+                                        <input id="mail" name="mail_" type="email" class="validate">
                                         <label for="mail">Email</label>
                                     </div>
                                 </div>
                                 
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input id="Password" type="password" class="validate">
+                                        <input id="Password" name="Password_" type="password" class="validate">
                                         <label for="Password">Contraseña</label>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                             
                             <div class="col s1"><span class="flow-text"> </span></div>
                             
-                            <!-- Alérgenos -->
+                            <!-- AlÃ©rgenos -->
                             <div class="col s6"><span class="flow-text"> 
                                 <h4>Alérgenos</h4>
                                 <p> Los alimentos que tengan alguno de los alérgenos que selecciones no se mostrarán en el menú</p>
@@ -120,11 +120,11 @@
                         
                         </div>
                         
-                        <!-- Botón enviar -->
+                        <!-- BotÃ³n enviar -->
                         <div class=row>
                             <div class="col s2 offset-s5"><span class="flow-text">
-                                <button class="btn waves-effect btn-large yellow darken-3" type="submit" name="action">
-                                    ¡Listo!
+                                <button class="btn waves-effect btn-large yellow darken-3" type="submit">
+                                    Â¡Listo!
                                     <i class="material-icons right"></i>
                                 </button>
                             </span></div>
