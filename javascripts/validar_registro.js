@@ -1,57 +1,41 @@
-/********************* VALIDACION DEL FORMULARIO EN JAVASCRIPT ******************************************/
-
-function validate_Email(email){
-		    
-	var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})$/;
+function validate_Email(email)
+{
+    var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})$/;
 
     if(!expr.test(email))
         return false;
     else
-    	return true;
+        return true;
 }
 
-function validate_form(){
-	
-	/* Obtenemos el valor del elemento con el ID especificado */
-
-	var nombre = document.forms["Formulario"]["name"].value;
-	var email = document.forms["Formulario"]["mail"].value;
-	var contra = document.forms["Formulario"]["Password"].value;
+function validate_form()
+{
+	var nombre  = document.forms["Formulario"]["name"].value;
+	var email   = document.forms["Formulario"]["mail"].value;
+	var contra  = document.forms["Formulario"]["Password"].value;
 	var contra2 = document.forms["Formulario"]["Repetir_Password"].value;
+    var terms   = document.getElementById("terms").checked;
 
-	
-	/* Comprobamos si los campos estan vacios o no cumplen las condiciones*/
-
-	if(nombre.length == 0){
-		alert("No se pueden dejar campos vacíos. Por favor introduzca un nombre.");
+    
+    if (terms == 0)
+    {
+        alert("Debe aceptar los Términos y Condiciones de Uso para continuar");
 		return false;
 	}
-	else{
-		
-		if(email.length == 0){
-			alert("No se pueden dejar campos vacíos. Por favor introduzca un email.");
-			return false;
-		}
-		else{
-			if(validate_Email(email) == false){
-				alert("FORMATO INCORRECTO. POR FAVOR VUELVA A INTRODUCIR EL CORREO");
-				return false;
-			}
-			if(contra.length == 0){
-				alert("No se pueden dejar campos vacíos. Por favor introduzca una contraseña.");
-				return false;
-			}
-			
-			if(contra2.length == 0){
-				alert("No se pueden dejar campos vacíos. Por favor introduzca una contraseña.");
-				return false;
-			}
-			else{
-				if(contra2 != contra){
-					alert("La contraseña no coincide. Vuelva a repetir la contraseña.");
-					return false;
-				}
-			}
-		}
+	else if((nombre.length == 0) || (email.length == 0) || (contra.length == 0) || (contra2.length == 0))
+    {
+		alert("Rellene todos los campos");
+		return false;
 	}
+    else if(validate_Email(email) == false)
+    {
+        alert("Formato e-mail incorrecto.");
+        return false;
+    }
+    else if(contra2 != contra)
+    {
+        alert("Las contraseñas introducidas no coinciden");
+        return false;
+    }
+    return true;
 }
