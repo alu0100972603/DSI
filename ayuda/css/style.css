@@ -1,0 +1,16 @@
+.container{
+    margin-top:100px;
+}
+.anchor{
+    padding-top: 180px; 
+    margin-top: -180px;
+}
+
+#terms{
+    height: 350px;
+    overflow: scroll;
+}
+
+h4{
+    font-size:20px;
+}
