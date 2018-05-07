@@ -1,0 +1,66 @@
+.producto-imagen img{
+    height:50px;
+    width: 50px;
+}
+
+h2{
+    font-size:42px;  
+}
+
+.producto h3{
+    margin:0px;
+    padding:0px;
+    font-size:20px;
+}
+
+.precio{
+    text-align:right;
+    font-weight:bold;
+    margin-top:6px;
+    font-size:16px;
+    color: grey;
+}
+
+.boton-add{
+    padding-top:10px;
+    margin-top:6px;
+}
+
+.pedido{
+    box-shadow: 15px 10px 31px -6px rgba(0,0,0,0.5);
+}
+
+.fixed{
+    bottom:20;
+    position: fixed;
+}
+
+.pedido{
+    font-style:italic;
+    color:grey;
+}
+
+.pedido .header h3{
+    font-style:normal;
+    margin:0px;
+    padding:10px;
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size:16px;
+    color:white;
+}
+
+footer button{
+    font-weight:bold;
+    margin:10px;
+    width:95%;
+}
+
+footer{
+    visibility:hidden;
+}
+
+.anchor{
+    padding-top: 200px; 
+    margin-top: -130px;
+}

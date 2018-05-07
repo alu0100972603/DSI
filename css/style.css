@@ -3,19 +3,19 @@ body, html{
 }
 
 body#bg{
-    background-image: url("../img/background.jpeg");
-    width: 100%; 
-    height: 100%;
+    background-image:  url("../img/background.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .forms{
-    height:85%;
+    height:80vh;
     padding:10px;
     margin:20px;
-    background-color: rgb(255,255,255,0.6);
+    background-color: rgb(255,255,255,0.7);
+    box-shadow: 7px 7px 19px -5px rgba(0,0,0,0.5)
 }
 
 .presentacion{
@@ -55,6 +55,7 @@ nav a:link{
 nav a:visited{
     color: white;
 }
+
 
 a:link{
     text-decoration: underline;
