@@ -2,8 +2,16 @@ body, html{
     height:100%;
 }
 
-body#bg{
+#bg{
     background-image:  url("../img/background.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#wc{
+    background-image:  url("../img/students.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,11 +56,11 @@ h1#navtitle{
     font-size: 32px;
 }
 
-nav a:link{
+nav a:link, #promo a:link{
     text-decoration: none;
 }
 
-nav a:visited{
+nav a:visited, #promo a:visited{
     color: white;
 }
 
@@ -63,4 +71,35 @@ a:link{
 
 a:visited{
     color:darkviolet;
+}
+
+#promo{
+    margin-top:50px;
+    padding-left:20px;
+}
+
+#promo1{
+    font-family: 'Alfa Slab One', cursive;
+    font-size:130px;
+}
+
+#promo2{
+    text-transform:uppercase;
+    color:#f57f17;
+    position:relative;
+    top:-50px;
+    font-family: 'Alfa Slab One', cursive;
+    font-size:48px;
+}
+
+#promo3{
+    font-size:23px;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+#promo4{
+    position:relative;
+    top:-60px;
+    font-size:23px;
+    font-family: 'Alfa Slab One', cursive;
 }
