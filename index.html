@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="es">
 	<head>
         <link rel="icon" href="img/logo.png">
         <title> FastFood </title>
@@ -31,44 +31,44 @@
         </nav>
         
     
-    <div class="row contenido">
-        
-        <div class="col s3 presentacion offset-s1"><span class="flow-text">
-            <span class="black-text text-darken-2">
-                <h2> La comida nunca fue tan rápida </h2>
-                <p> Siéntate, realiza tu pedido con FAST FOOD y ¡listo! Sin esperas. </p>
-                <p> Pide y paga únicamente utilizando tu smartphone.</p>
-            </span>
-        </span></div>
-        
-        <div class="col s3 offset-s4 forms"><span class="flow-text">
-                <form action="autentifica.php" method="POST" name="Formulario"  onsubmit="return validate_form()">
-                    <h3> Iniciar sesión </h3>
-                    <div class="row">
-                        <div class="input-field col s12">
-                              <input name ="mail_" id="mail" type="email" class="validate">
-                              <label for="mail">Email</label>
+        <div class="row contenido">
+            
+            <div class="col s3 presentacion offset-s1"><span class="flow-text">
+                <span class="black-text text-darken-2">
+                    <h2> La comida nunca fue tan rápida </h2>
+                    <p> Siéntate, realiza tu pedido con FAST FOOD y ¡listo! Sin esperas. </p>
+                    <p> Pide y paga únicamente utilizando tu smartphone.</p>
+                </span>
+            </span></div>
+            
+            <div class="col s3 offset-s4 forms"><span class="flow-text">
+                    <form action="autentifica.php" method="POST" name="Formulario"  onsubmit="return validate_form()">
+                        <h3> Iniciar sesión </h3>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                  <input name ="mail_" id="mail" type="email" class="validate">
+                                  <label for="mail">Email</label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                             <input name="Password_" id="Password" type="password" class="validate">
-                             <label for="Password">Password</label>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                 <input name="Password_" id="Password" type="password" class="validate">
+                                 <label for="Password">Password</label>
+                            </div>
                         </div>
-                    </div>
-                    <button class="btn waves-effect yellow darken-3" type="submit"> Iniciar sesion
+                        <button class="btn waves-effect yellow darken-3" type="submit"> Iniciar sesion
+                            <i class="material-icons right"></i>
+                        </button>
+                    </form>
+                  
+                <h3> Registrarse </h3>
+                <a class="nav-item nav-link" href="registro.html">
+                    <button class="btn waves-effect yellow darken-3" type="submit">Crear cuenta
                         <i class="material-icons right"></i>
                     </button>
-                </form>
-              
-            <h3> Registrarse </h3>
-            <a class="nav-item nav-link" href="registro.html">
-                <button class="btn waves-effect yellow darken-3" type="submit">Crear cuenta
-                    <i class="material-icons right"></i>
-                </button>
-            </a>
-        </span></div>
-            
-    </div>
+                </a>
+            </span></div>
+                
+        </div>
 	</body>
 </html>
