@@ -1,10 +1,10 @@
-<!DOCTYPE HTML>
-<html lang="es">
+<html>
     <head>
         <link rel="icon" href="img/logo.png">
         <title> Menu - FastFood </title>
         <meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="javascripts/comprobar_sesion.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
@@ -29,6 +29,7 @@
                         <ul id="nav-movile" class="right hide-on-med-and-down">
                             <li><a  href="ayuda/ayuda.html">Centro de Ayuda </a></li>
                             <li><a  href="contacto.html">Contacto </a></li>
+                            <li><a  href="cerrar_sesion.php">Cerrar sesión </a></li>
                         </ul>    
                     </div>
                 </div>
@@ -60,7 +61,7 @@
                                 </div>
                                 
                                 <div class="col s2 producto-imagen">
-                                        <img src="img/sopagambas.png" alt="placeholder">
+                                        <img src="img/sopagambas.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
@@ -84,7 +85,7 @@
                                 </div>
                                 
                                 <div class="col s2 producto-imagen">
-                                        <img src="img/ensaladacesar.png" alt="placeholder">
+                                        <img src="img/ensaladacesar.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
@@ -108,7 +109,7 @@
                                 </div>
                                 
                                 <div class="col s2 producto-imagen">
-                                        <img src="img/nachos.png" alt="placeholder">
+                                        <img src="img/nachos.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
@@ -137,7 +138,7 @@
                                 </div>
                                 
                                 <div class="col s2 producto-imagen">
-                                        <img src="img/costillas.png" alt="placeholder">
+                                        <img src="img/costillas.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
@@ -161,7 +162,7 @@
                                 </div>
                                 
                                 <div class="col s2 producto-imagen">
-                                    <img src="img/lasagna.png" alt="placeholder">
+                                    <img src="img/lasagna.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
@@ -185,7 +186,7 @@
                                 </div>
                                 
                                 <div class="col s2 producto-imagen">
-                                        <img src="img/paella.png" alt="placeholder">
+                                        <img src="img/paella.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
@@ -214,7 +215,7 @@
                                 </div>
                                 
                                 <div class="col s2 producto-imagen">
-                                        <img src="img/cocacola.png" alt="placeholder">
+                                        <img src="img/cocacola.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
@@ -238,7 +239,7 @@
                                 </div>
                                 
                                 <div class="col s2 producto-imagen">
-                                        <img src="img/fanta.png" alt="placeholder">
+                                        <img src="img/fanta.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
@@ -262,7 +263,7 @@
                                 </div>
                                 
                                 <div class="col s2 producto-imagen">
-                                        <img src="img/sprite.png" alt="placeholder">
+                                        <img src="img/sprite.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
@@ -286,7 +287,7 @@
                                 </div>
                                 
                                 <div class="col s2 producto-imagen">
-                                        <img src="img/appletiser.png" alt="placeholder">
+                                        <img src="img/appletiser.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
@@ -310,7 +311,7 @@
                                 </div>
                                 
                                 <div class="col s2 producto-imagen">
-                                        <img src="img/agua.png" alt="placeholder">
+                                        <img src="img/agua.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
@@ -353,7 +354,7 @@
                             
                             <footer>
                                 <button class="waves-effect waves-light btn-large grey">
-                                    Confirmar - <span id="total"> 0€</span>
+                                    Confirmar - <span id="total"> €</span>
                                 </button>
                             </footer>
                         </div>
@@ -361,11 +362,7 @@
                 </div>
             </div>
             
-           
-            
-            
-            
-            
+  
         </div>
     </body>
 </html>

@@ -74,7 +74,7 @@ a:visited{
 }
 
 #promo{
-    margin-top:50px;
+    margin-top:10px;
     padding-left:20px;
 }
 
@@ -102,4 +102,12 @@ a:visited{
     top:-60px;
     font-size:23px;
     font-family: 'Alfa Slab One', cursive;
+}
+
+#welcome{
+    color:white;
+}
+
+.container{
+    padding:30px;
 }

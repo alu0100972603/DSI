@@ -15,7 +15,8 @@
 	if ($Tupla["id"] != "")
     {
         session_start();
-        $_SESSION["USUARIO_NOMBRE"] = $Tupla["name"];
+        $_SESSION["USUARIO"] = $Tupla["name"];
+        $_SESSION["STATUS"] = "OK";
         
         echo "<script>
               window.location.href='welcome.html';
@@ -23,7 +24,7 @@
     }
     else{
         echo "<script>
-                alert('No se ha podido iniciar sesion.';
+                alert('No se ha podido iniciar sesion.');
                 window.location.href='index.html';
               </script>";
     }
