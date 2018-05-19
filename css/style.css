@@ -10,6 +10,34 @@ body, html{
     background-attachment: fixed;
 }
 
+.forms{
+    height:auto;
+    padding:10px;
+    margin:20px;
+    background-color: rgb(255,255,255, 0.7); 
+    box-shadow: 7px 7px 19px -5px rgba(0,0,0,0.4)
+}
+
+.container.forms{
+    padding-left:25px;
+}
+
+.presentacion{
+    margin-top:20px;
+}
+
+@media (max-width: 992px) {
+    
+    #bg{
+        background-image:  url("../img/mobile-background2.jpg");
+    }
+    
+    .presentacion{
+        text-align: center 
+    }
+
+}
+
 #wc{
     background-image:  url("../img/students.jpg");
     background-position: center;
@@ -18,22 +46,13 @@ body, html{
     background-attachment: fixed;
 }
 
-.forms{
-    height:80vh;
-    padding:10px;
-    margin:20px;
-    background-color: rgb(255,255,255,0.7);
-    box-shadow: 7px 7px 19px -5px rgba(0,0,0,0.5)
-}
 
-.presentacion{
-    margin-top:20px;
-}
+
 
 .contacto{
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 2.5em;
     margin-bottom: 30px;
 }
 
@@ -51,9 +70,9 @@ body, html{
     background-size: cover;
 }
 
-h1#navtitle{
+#navtitle{
     margin:5px;
-    font-size: 32px;
+    font-size: 0.8em;
 }
 
 nav a:link, #promo a:link{
@@ -80,7 +99,7 @@ a:visited{
 
 #promo1{
     font-family: 'Alfa Slab One', cursive;
-    font-size:130px;
+    font-size:8.125em;
 }
 
 #promo2{
@@ -89,7 +108,7 @@ a:visited{
     position:relative;
     top:-50px;
     font-family: 'Alfa Slab One', cursive;
-    font-size:48px;
+    font-size:3em;
 }
 
 #promo3{
@@ -100,7 +119,7 @@ a:visited{
 #promo4{
     position:relative;
     top:-60px;
-    font-size:23px;
+    font-size:1.4375em;
     font-family: 'Alfa Slab One', cursive;
 }
 
@@ -110,4 +129,35 @@ a:visited{
 
 .container{
     padding:30px;
+}
+
+@media (max-width: 600px) {
+    
+    #promo1{
+        font-family: 'Alfa Slab One', cursive;
+        font-size:5.5em;
+    }
+    
+    #promo2{
+        text-transform:uppercase;
+        color:#f57f17;
+        position:relative;
+        top:-30px;
+        font-family: 'Alfa Slab One', cursive;
+        font-size:2em;
+    }
+    
+    #promo3{
+        font-size:1em;
+        font-family: 'Alfa Slab One', cursive;
+    }
+    
+    #promo4{
+        position:relative;
+        top:-40px;
+        font-size:1em;
+        font-family: 'Alfa Slab One', cursive;
+    }    
+    
+
 }

@@ -4,22 +4,23 @@
 }
 
 h2{
-    font-size:42px;  
+    font-size:2.625em;  
 }
 
 .producto h3{
     margin:0px;
     padding:0px;
-    font-size:20px;
+    font-size:1.25em;
 }
 
 .precio{
     text-align:right;
     font-weight:bold;
     margin-top:6px;
-    font-size:16px;
+    font-size:1em;
     color: grey;
 }
+
 
 .boton-add{
     padding-top:10px;
@@ -31,8 +32,37 @@ h2{
 }
 
 .fixed{
-    bottom:20;
+    bottom:20px;
     position: fixed;
+    z-index:50;
+}
+
+@media (max-width: 600px) {
+    
+    .producto h3{
+        font-size:1em;
+    }
+    
+    .producto .descripcion{
+        font-size:0.8em;
+    }
+    
+    .precio{
+        font-size:0.8em;
+    }
+    
+    .fixed{
+        bottom:0;
+    }
+    
+    .ajustable{
+        max-height: 5em;
+        overflow-y: scroll;
+    }
+    
+    .productos{
+        margin-bottom:150px;
+    }
 }
 
 .pedido{
@@ -46,13 +76,13 @@ h2{
     padding:10px;
     text-transform:uppercase;
     font-weight:bold;
-    font-size:16px;
+    font-size:1em;
     color:white;
 }
 
 footer button{
-    font-weight:bold;
     margin:10px;
+    font-weight:bold;
     width:95%;
 }
 

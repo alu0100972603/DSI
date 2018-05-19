@@ -7,10 +7,10 @@
 }
 
 #terms{
-    height: 350px;
-    overflow: scroll;
+    height: 16em;
+    overflow-y: scroll;
 }
 
 h4{
-    font-size:20px;
+    font-size:1.25;
 }

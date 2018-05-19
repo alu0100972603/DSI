@@ -4,6 +4,7 @@
         <link rel="icon" href="img/logo.png">
         <title> Menu - FastFood </title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="javascripts/comprobar_sesion.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
@@ -14,7 +15,7 @@
 
     </head>
 
-    <body>
+    <body class="grey lighten-3">
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper">
@@ -27,11 +28,11 @@
                             </h1>
                         </a>
         
-                        <ul id="nav-movile" class="right hide-on-med-and-down">
-                            <li><a  href="ayuda/ayuda.html">Centro de Ayuda </a></li>
-                            <li><a  href="contacto.html">Contacto </a></li>
-                            <li><a  href="cerrar_sesion.php">Cerrar sesión </a></li>
-                        </ul>    
+                        <ul id="nav-movile" class="right">
+                            <li class=" hide-on-med-and-down"><a  href="ayuda/ayuda.html">Ayuda </a></li>
+                            <li class=" hide-on-med-and-down"><a  href="contacto.html">Contacto </a></li>
+                            <li><a  href="cerrar_sesion.php"> Salir </a></li>
+                        </ul>   
                     </div>
                 </div>
                 
@@ -50,79 +51,79 @@
             <div class="row">
             </div>
             <div class="row">
-                <div class="col s8">
+                <div class="col s12 m8 productos">
                     <div class="row">
                         
                         <div class="col s12 ">
                             <h2 id="entrantes" class="anchor">Entrantes</h2>
                             
                             <div class="row producto" id="p1">
-                                <div class="col s2 boton-add">
+                                <div class="col s2 boton-add center align">
                                     <button name="#p1" class="btn-floating btn-small waves-effect waves-light yellow darken-4"> + </button>
                                 </div>
                                 
-                                <div class="col s2 producto-imagen">
+                                <div class="col s3 producto-imagen center-align">
                                         <img src="img/sopagambas.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
                                     <div class="row">
-                                        <div class="col s9">
+                                        <div class="col s12">
                                             <h3>Sopa de gambas</h3>
                                             <div class="descripcion"> Gambas, arroz, ajo</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="col s2 producto-detalles">
+                                <div class="col s1 producto-detalles">
                                     <div class="precio"> 4,99€ </div>
                                 </div>
                             </div>
                             
                             <div class="row producto" id="p2">
                                 
-                                <div class="col s2 boton-add">
+                                <div class="col s2 boton-add center align">
                                       <button name="#p2" class="btn-floating btn-small waves-effect waves-light yellow darken-4"> + </button>
                                 </div>
                                 
-                                <div class="col s2 producto-imagen">
+                                <div class="col s3 producto-imagen center-align">
                                         <img src="img/ensaladacesar.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
                                     <div class="row">
-                                        <div class="col s9">
+                                        <div class="col s12">
                                             <h3>Ensalada césar</h3>
                                             <div class="descripcion"> Pollo, lechuga, soja</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="col s2">
+                                <div class="col s1">
                                     <div class="precio"> 6,99€ </div>
                                 </div>
                             </div>
                             
                             <div class="row producto" id="p3">
                                 
-                                <div class="col s2 boton-add">
+                                <div class="col s2 boton-add center align">
                                       <button name="#p3" class="btn-floating btn-small waves-effect waves-light yellow darken-4"> + </button>
                                 </div>
                                 
-                                <div class="col s2 producto-imagen">
+                                <div class="col s3 producto-imagen center-align">
                                         <img src="img/nachos.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
                                     <div class="row">
-                                        <div class="col s9">
+                                        <div class="col s12">
                                             <h3>Nachos con queso</h3>
                                             <div class="descripcion"> Tortillas de maíz, queso</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="col s2 producto-detalles">
+                                <div class="col s1 producto-detalles">
                                     <div class="precio"> 4,50€ </div>
                                 </div>
                             </div>
@@ -134,72 +135,72 @@
                             
                             <div class="row producto" id="p4">
                                 
-                                <div class="col s2 boton-add">
+                                <div class="col s2 boton-add center align">
                                       <button name="#p4" class="btn-floating btn-small waves-effect waves-light yellow darken-4"> + </button>
                                 </div>
                                 
-                                <div class="col s2 producto-imagen">
+                                <div class="col s3 producto-imagen center-align">
                                         <img src="img/costillas.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
                                     <div class="row">
-                                        <div class="col s9">
+                                        <div class="col s12">
                                             <h3>Costillas</h3>
                                             <div class="descripcion"> Cerdo y papas fritas</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="col s2 producto-detalles">
+                                <div class="col s1 producto-detalles">
                                     <div class="precio"> 11,99€ </div>
                                 </div>
                             </div>
                             
                             <div class="row producto" id="p5">
                                 
-                                <div class="col s2 boton-add">
+                                <div class="col s2 boton-add center align">
                                     <button name="#p5" class="btn-floating btn-small waves-effect waves-light yellow darken-4"> + </button>
                                 </div>
                                 
-                                <div class="col s2 producto-imagen">
+                                <div class="col s3 producto-imagen center-align">
                                     <img src="img/lasagna.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
                                     <div class="row">
-                                        <div class="col s9">
+                                        <div class="col s12">
                                             <h3>Lasaña</h3>
                                             <div class="descripcion"> Ternera, pasta, queso</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="col s2">
+                                <div class="col s1">
                                     <div class="precio"> 9,99€ </div>
                                 </div>
                             </div>
                             
                             <div class="row producto" id="p6">
                                 
-                                <div class="col s2 boton-add">
+                                <div class="col s2 boton-add center align">
                                       <button name="#p6" class="btn-floating btn-small waves-effect waves-light yellow darken-4"> + </button>
                                 </div>
                                 
-                                <div class="col s2 producto-imagen">
+                                <div class="col s3 producto-imagen center-align">
                                         <img src="img/paella.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
                                     <div class="row">
-                                        <div class="col s9">
+                                        <div class="col s12">
                                             <h3>Paella marisco</h3>
                                             <div class="descripcion"> Arroz, gambas, mejillones</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="col s2">
+                                <div class="col s1">
                                     <div class="precio"> 14,99€ </div>
                                 </div>
                             </div>
@@ -211,120 +212,120 @@
                             
                             <div class="row producto" id="p7">
                                 
-                                <div class="col s2 boton-add">
+                                <div class="col s2 boton-add center align">
                                       <button name="#p7" class="btn-floating btn-small waves-effect waves-light yellow darken-4"> + </button>
                                 </div>
                                 
-                                <div class="col s2 producto-imagen">
+                                <div class="col s3 producto-imagen center-align">
                                         <img src="img/cocacola.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
                                     <div class="row">
-                                        <div class="col s9">
+                                        <div class="col s12">
                                             <h3>Coca-Cola</h3>
                                             <div class="descripcion">Lata 330ml</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="col s2 producto-detalles">
+                                <div class="col s1 producto-detalles">
                                     <div class="precio"> 1,80€ </div>
                                 </div>
                             </div>
                             
                             <div class="row producto" id="p8">
                                 
-                                <div class="col s2 boton-add">
+                                <div class="col s2 boton-add center align">
                                       <button name="#p8" class="btn-floating btn-small waves-effect waves-light yellow darken-4"> + </button>
                                 </div>
                                 
-                                <div class="col s2 producto-imagen">
+                                <div class="col s3 producto-imagen center-align">
                                         <img src="img/fanta.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
                                     <div class="row">
-                                        <div class="col s9">
+                                        <div class="col s12">
                                             <h3>Fanta</h3>
                                             <div class="descripcion"> Lata 330ml</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="col s2">
+                                <div class="col s1">
                                     <div class="precio"> 1,80€ </div>
                                 </div>
                             </div>
                             
                             <div class="row producto" id="p9">
                                 
-                                <div class="col s2 boton-add">
+                                <div class="col s2 boton-add center align">
                                       <button name="#p9" class="btn-floating btn-small waves-effect waves-light yellow darken-4"> + </button>
                                 </div>
                                 
-                                <div class="col s2 producto-imagen">
+                                <div class="col s3 producto-imagen center-align">
                                         <img src="img/sprite.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
                                     <div class="row">
-                                        <div class="col s9">
+                                        <div class="col s12">
                                             <h3>Sprite</h3>
                                             <div class="descripcion"> Lata 330ml</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="col s2">
+                                <div class="col s1">
                                     <div class="precio"> 1,80€ </div>
                                 </div>
                             </div>
                             
                             <div class="row producto" id="p10">
                                 
-                                <div class="col s2 boton-add">
+                                <div class="col s2 boton-add center align">
                                       <button name="#p10" class="btn-floating btn-small waves-effect waves-light yellow darken-4"> + </button>
                                 </div>
                                 
-                                <div class="col s2 producto-imagen">
+                                <div class="col s3 producto-imagen center-align">
                                         <img src="img/appletiser.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
                                     <div class="row">
-                                        <div class="col s9">
+                                        <div class="col s12">
                                             <h3>Appletiser</h3>
                                             <div class="descripcion"> Botella 275ml</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="col s2">
+                                <div class="col s1">
                                     <div class="precio"> 1,95€ </div>
                                 </div>
                             </div>
                             
                             <div class="row producto" id="p11">
                                 
-                                <div class="col s2 boton-add">
+                                <div class="col s2 boton-add center align">
                                       <button name="#p11" class="btn-floating btn-small waves-effect waves-light yellow darken-4"> + </button>
                                 </div>
                                 
-                                <div class="col s2 producto-imagen">
+                                <div class="col s3 producto-imagen center-align">
                                         <img src="img/agua.png" alt="">
                                 </div>
                                 
                                 <div class="col s6 producto-detalles">
                                     <div class="row">
-                                        <div class="col s9">
+                                        <div class="col s12">
                                             <h3>Agua</h3>
                                             <div class="descripcion"> Botella 500ml</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="col s2">
+                                <div class="col s1">
                                     <div class="precio"> 1,10€ </div>
                                 </div>
                             </div>
@@ -336,7 +337,7 @@
                     
                 </div>
                 
-                <div class="col s4 offset-s6 fixed">
+                <div class="col s10 m3 offset-m7 l3 offset-l6 fixed">
                     <div class="row">    
                         <div class="col s12  white pedido">    
                             <div class="row header yellow darken-4">
@@ -344,7 +345,7 @@
                             </div>
                             
                             <div class="row">
-                                <div class="col s10 offset-s1"> 
+                                <div class="col s10 offset-s1 ajustable"> 
                                     
                                     <div id="contenido">
                                         La cesta está vacía
