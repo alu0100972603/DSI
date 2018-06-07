@@ -13,7 +13,6 @@
         $Password = $_REQUEST["Password_"];
         $Mail     = $_REQUEST["mail_"];
         
-        
         $SQL  = "insert into datos_personales";
         $SQL .= " (name, password, mail) values ";
         $SQL .= " ('$Name', '$Password','$Mail')";
@@ -24,6 +23,26 @@
         }
         else
         {
+            $SQL="select * from datos_personales where mail='$Mail' and password='$Password'";
+
+	       $Resultado = mysqli_query($Conexion, $SQL);
+	       $Tupla = mysqli_fetch_array($Resultado, MYSQLI_ASSOC);
+	       $id = $Tupla["id"];
+            
+           if (isset($_POST['alergeno'])){
+                foreach($_POST['alergeno'] as $tipo){
+                    $SQL  = "insert into alergenos";
+                    $SQL .= " (id, tipo) values ";
+                    $SQL .= " ('$id', '$tipo')";
+                    
+                    if (!(mysqli_query($Conexion, $SQL)))
+                    {
+                        echo "Error: " . mysqli_error($Conexion);
+                    }
+                }
+                    
+            }
+
             echo "<script>
                     alert('Registro completado exitosamente');
                     window.location.href='index.html';

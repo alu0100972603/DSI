@@ -87,6 +87,16 @@ class Carrito
 
 $(document).ready(function(){
     
+    $.get('get_session.php', function (data) 
+    {
+        var sesion = JSON.parse(data) 
+        var alergenos = sesion["ALERGENOS"].split(" ").filter(x => x)
+        for (var i = 0; i<alergenos.length; i++)
+        {
+            $("." + alergenos[i]).css("display", "none")
+        }
+    });
+
     var carro = new Carrito()
         
     $("button").click( function(){
