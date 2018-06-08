@@ -8,6 +8,176 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script type="text/javascript" src="javascripts/validar_registro.js"></script>
+        <script type="text/javascript" src="javascripts/class_email.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    </head>
+
+    <body class="grey lighten-3">
+        <nav>
+            <div class="nav-wrapper">
+
+                <a href="welcome.html" class="brand-logo">
+                    <div class="row valign-wrapper">
+                        <div class="col"> 
+                            <div class="logo"></div>
+                        </div>
+                        <div class="col"> 
+                            <h1 id="navtitle"> FastFood</h1>
+                        </div>
+                    </div>
+                </a>
+
+                <ul id="nav-movile" class="right hide-on-med-and-down">
+                <li><a  href="ayuda/ayuda.html"> Ayuda </a></li>
+                <li><a  href="contacto.html">Contacto </a></li>
+                </ul>    
+            </div>
+        </nav>
+
+        <div class=container>
+            <!-- Título de la página -->
+            <div class="row">
+                <div class="col s12 center-align flow-text">
+                    <h2> Tu cuenta en FastFood </h2>    
+                </div>
+
+            </div>                 
+
+            <!-- Formulario -->
+            <div class="row">
+
+                <form action="insertar.php" method="post" name="Formulario"  onsubmit="return validate_form()">
+
+                    <div class=row>
+
+                        <!-- Información personal -->                  
+                        <div class="col s10 offset-s1 l5 flow-text">
+                            <div class="row">
+                                <h3>Datos Personales</h3>
+                                <div class="small">Los campos marcados con * son obligatorios </div>
+
+                                <div class="col s1 required"> * </div>
+                                <div class="col s11">
+                                    <div class="input-field">
+                                        <input id="name" name="name_" type="text" class="validate">
+                                        <label for="name">Nombre</label>
+                                    </div>
+                                </div>
+                    
+                                <div class="col s1 required"> * </div>
+                                <div class="col s11">
+                                    <div class="input-field">
+                                        <input id="mail" name="mail_" type="email" class="validate">
+                                        <label for="mail">Email</label>
+                                    </div>
+                                </div>
+
+                                <div class="col s1 required"> * </div>
+                                <div class="col s11">
+                                    <div class="input-field">
+                                        <input id="Password" name="Password_" type="password" class="validate">
+                                        <label for="Password">Contraseña</label>
+                                    </div>
+                                </div>
+               
+                                <div class="col s1 required"> * </div>
+                                <div class="col s11">
+                                    <div class="input-field">
+                                        <input id="Repetir_Password" type="password" class="validate">
+                                        <label for="Repetir_Password">Repite la contraseña</label>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                        <!-- Alérgenos -->
+                        <div class="col s10 offset-s1 l5 offset-l2 flow-text">
+                            <div class="row s12"> 
+                                <h3>Alérgenos</h3> 
+                                <p> Se ocultarán los alimentos que tengan alguno de los alérgenos que selecciones</p>
+                            </div>
+                            <div class=row>
+                                <!-- Columna izquierda-->
+                                <div class="col s6">
+                                    <label>
+                                        <input type="checkbox" name="alergeno[]" value="gluten" />
+                                        <span> Gluten </span>
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="alergeno[]" value="crustaceos" />
+                                        <span> Crustáceos </span>
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="alergeno[]" value="gluten" />
+                                        <span> Huevo </span>
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="alergeno[]" value="pescado" />
+                                        <span> Pescado </span>
+                                    </label><br>
+                                </div>
+
+                                <!-- Columna derecha -->    
+                                <div class="col s6">
+                                    <label>
+                                        <input type="checkbox" name="alergeno[]" value="cacahuetes" />
+                                        <span> Cacahuetes </span>
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="alergeno[]" value="soja" />
+                                        <span> Soja </span>
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="alergeno[]" value="lacteos" />
+                                        <span> Lácteos </span>
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="alergeno[]" value="frutossecos" />
+                                        <span> Frutos secos </span>
+                                    </label><br>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 flow-text">
+                            <div class="row center-align">
+                                <label>
+                                    <input id="terms" type="checkbox" name="terminosycondiciones" value="terminosycondiciones" />
+                                    <span> He leído y acepto los <a href="ayuda/ayuda.html#terminosycondiciones" target="_blank"> Términos y Condiciones de Uso</a> </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botón enviar -->
+                    <div class=row>
+                        <div class="col s12 center-align flow-text">
+                            <button class="btn waves-effect btn-large deep-orange accent-4" type="submit">
+                                ¡Listo!
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html><!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <title> Registro - FastFood </title>
+        <link rel="icon" href="img/logo.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         <script type="text/javascript" language="javascript" src="javascripts/validar_registro.js"></script>
         <script type="text/javascript" language="javascript" src="javascripts/class_email.js"></script>
         <link rel="stylesheet" href="css/style.css">

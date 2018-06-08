@@ -18,7 +18,7 @@ h2{
     font-weight:bold;
     margin-top:6px;
     font-size:1em;
-    color: grey;
+    color:#6B6B76;
 }
 
 
@@ -27,7 +27,16 @@ h2{
     margin-top:6px;
 }
 
+.add{
+    position:relative;
+    top:3px;
+    width:15px;
+    height:15px;
+}
+
 .pedido{
+    font-style:italic;
+    color:#747481;
     box-shadow: 15px 10px 31px -6px rgba(0,0,0,0.5);
 }
 
@@ -65,12 +74,8 @@ h2{
     }
 }
 
-.pedido{
-    font-style:italic;
-    color:grey;
-}
-
 .pedido .header h3{
+    font-family: inherit;
     font-style:normal;
     margin:0px;
     padding:10px;
@@ -93,4 +98,8 @@ footer{
 .anchor{
     padding-top: 200px; 
     margin-top: -130px;
+}
+
+button:focus{
+    box-shadow: 5px 5px 5px grey;
 }

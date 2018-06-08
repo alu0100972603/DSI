@@ -7,71 +7,67 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-		<script type="text/javascript" language="javascript" src="javascripts/validar_index.js"></script>
-		<script type="text/javascript" language="javascript" src="javascripts/class_email.js"></script>
+		<script type="text/javascript" src="javascripts/validar_index.js"></script>
+		<script type="text/javascript" src="javascripts/class_email.js"></script>
 		<link rel="stylesheet" href="css/style.css">
 		<meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
 	</head>
 	
 	<body id="bg">
-        <nav>
-            <div class="nav-wrapper yellow darken-4">
-                
-                <a href="welcome.html" class="brand-logo">
-                    <h1 id="navtitle">
-                        <div class="logo"></div>
-                        FastFood
-                    </h1>
-                </a>
-                  
-                <ul id="nav-movile" class="right hide-on-med-and-down">
-                <li><a  href="ayuda/ayuda.html"> Ayuda </a></li>
-                <li><a  href="contacto.html">Contacto </a></li>
-                </ul>    
-            </div>
-        </nav>
-        
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="welcome.html" class="brand-logo">
+                        <div class="row valign-wrapper">
+                            <div class="col"> 
+                                <div class="logo"></div>
+                            </div>
+                            <div class="col"> 
+                                <h1 id="navtitle"> FastFood</h1>
+                            </div>
+                        </div>
+                    </a>
+
+                    <ul id="nav-movile" class="right hide-on-med-and-down">
+                    <li><a  href="ayuda/ayuda.html"> Ayuda </a></li>
+                    <li><a  href="contacto.html">Contacto </a></li>
+                    </ul>    
+                </div>
+            </nav>
+        </div>
         <div class="row contenido">
-            
-            <div class="col s10 offset-s1 l3 presentacion offset-l1"><span class="flow-text">
-                <span class="black-text text-darken-2">
+            <div class="col s10 offset-s1 l3 presentacion offset-l1 flow-text">
+                <div class="black-text text-darken-2">
                     <h2> La comida nunca fue tan rápida </h2>
-                    <p class="hide-on-small-only"> Siéntate, realiza tu pedido con FAST FOOD y ¡listo! Sin esperas. </p>
-                    <p class="hide-on-small-only"> Pide y paga únicamente utilizando tu smartphone.</p>
-                </span>
-            </span></div>
+                    <p class="hide-on-small-only"> Pide y paga con tu teléfono. Sin esperas. </p>
+                </div>
+            </div>
             
-            <div class="col s10 offset-s1 l4 offset-l4 center-align"><span class="flow-text">
+            <div class="col s10 offset-s1 l4 offset-l4 center-align flow-text">
                 <div class="row">
                     <div class="container forms">
                         <form action="autentifica.php" method="POST" name="Formulario"  onsubmit="return validate_form()">
                             <h3> Iniciar sesión </h3>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                      <input name ="mail_" id="mail" type="email" class="validate">
-                                      <label for="mail">Email</label>
-                                </div>
+                            <div class="input-field">
+                                  <input name ="mail_" id="mail" type="email" class="validate">
+                                  <label for="mail">Email</label>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                     <input name="Password_" id="Password" type="password" class="validate">
-                                     <label for="Password">Password</label>
-                                </div>
+                            <div class="input-field">
+                                 <input name="Password_" id="Password" type="password" class="validate">
+                                 <label for="Password">Password</label>
                             </div>
-                            <button class="btn waves-effect yellow darken-3" type="submit"> Iniciar sesion
-                                <i class="material-icons right"></i>
+                            <button class="btn waves-effect orange darken-4" type="submit">           Iniciar sesion
                             </button>
                         </form>
                       
                         <h3> Registrarse </h3>
-                        <a class="nav-item nav-link" href="registro.html">
-                            <button class="btn waves-effect yellow darken-3" type="submit">Crear cuenta
-                                <i class="material-icons right"></i>
-                            </button>
+                        <a class="button btn waves-effect orange darken-4" href="registro.html">
+                            Crear cuenta                                
                         </a>
                     </div>
                 </div>
-            </span></div>
+            </div>
                 
         </div>
 	</body>

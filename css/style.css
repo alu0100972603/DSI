@@ -2,6 +2,16 @@ body, html{
     height:100%;
 }
 
+h1, h2, h3{
+    font-family: 'Patua One', cursive;
+}
+
+nav{
+    font-size:20px;
+    font-weight: bold;
+    background-color: #e65100;
+}
+
 #bg{
     background-image:  url("../img/background.jpeg");
     background-position: center;
@@ -13,7 +23,7 @@ body, html{
 .forms{
     height:auto;
     padding:10px;
-    margin:20px;
+    margin-top:40px;
     background-color: rgb(255,255,255, 0.7); 
     box-shadow: 7px 7px 19px -5px rgba(0,0,0,0.4)
 }
@@ -71,7 +81,10 @@ body, html{
 }
 
 #navtitle{
-    margin:5px;
+    position:relative;
+    left:-20px;
+    margin:0px;
+    padding:0px;
     font-size: 0.8em;
 }
 
@@ -83,6 +96,21 @@ nav a:visited, #promo a:visited{
     color: white;
 }
 
+.button, button{
+    font-weight: bold;
+}
+
+.button:focus{
+    box-shadow: 5px 5px 5px grey;
+}
+
+a:visited.button{
+    color: white;
+}
+
+a:link.button{
+    text-decoration: none;
+}
 
 a:link{
     text-decoration: underline;
@@ -104,7 +132,7 @@ a:visited{
 
 #promo2{
     text-transform:uppercase;
-    color:#f57f17;
+    color:#dd2c00;
     position:relative;
     top:-50px;
     font-family: 'Alfa Slab One', cursive;
@@ -134,30 +162,44 @@ a:visited{
 @media (max-width: 600px) {
     
     #promo1{
-        font-family: 'Alfa Slab One', cursive;
         font-size:5.5em;
     }
     
     #promo2{
-        text-transform:uppercase;
-        color:#f57f17;
         position:relative;
         top:-30px;
-        font-family: 'Alfa Slab One', cursive;
         font-size:2em;
     }
     
     #promo3{
         font-size:1em;
-        font-family: 'Alfa Slab One', cursive;
     }
     
     #promo4{
         position:relative;
         top:-40px;
         font-size:1em;
-        font-family: 'Alfa Slab One', cursive;
-    }    
-    
+    }       
 
+}
+
+label {
+    color:#6B6B76;
+}
+
+button:focus{
+    box-shadow: 5px 5px 5px grey;
+}
+
+.required{
+    position:relative;
+    right:10px;
+    top:26px;
+    color:#dd2c00;
+}
+
+.small{
+    position:relative;
+    top:-12px;
+    font-size: 0.66em;
 }
