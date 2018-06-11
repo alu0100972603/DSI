@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+    <html>
+        <head>
+            <link rel="icon" href="img/logo.png">
+            <title> Valoraciones - FastFood </title>
+            <meta charset="utf-8">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="css/stylestart.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script type="text/javascript" src="javascripts/validar_chat.js"></script>
+        </head>
+		
+        <body>
+            <nav>
+                 <div class="nav-wrapper">
+                    <a href="welcome.html" class="brand-logo">
+                        <div class="row valign-wrapper">
+                            <div class="col"> 
+                                <div class="logo"></div>
+                            </div>
+                            <div class="col"> 
+                                <h1 id="navtitle"> FastFood</h1>
+                            </div>
+                        </div>
+                    </a>
+                    <ul id="nav-movile" class="right hide-on-med-and-down">
+                        <li><a  href="ayuda/ayuda.html">Centro de Ayuda </a></li>
+                        <li><a  href="contacto.html">Contacto </a></li>
+                    </ul>    
+                </div>
+                <div class="row contenido">
+                    <div class="col s6 l3 offset-l1 forms"><span class="black-text text-darken-2">
+                        <h2> ¿Qué opinas de fast Food? </h2>
+                        <form id="Formulario" name="Formulario" class="col s12"  action="insertar.php" method="post" onsubmit="return validate_form()">
+                                <div class="row">
+                                    <div class="col s12"> 
+                                        Nombre:
+                                        <input type="text" id="nombre" name="nombre_"  >
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s4 offset s1">
+                                            Mensaje: 
+                                    </div>
+                                    <div class="col s8">
+                                        <div class="clasificacion">
+                                                <input id="estrellas" name="estrellas" value="5" type="radio"><!--
+                                                --><label for="radio1">★</label><!--
+                                                --><input id="radio2" name="estrellas" value="4" type="radio"><!--
+                                                --><label for="radio2">★</label><!--
+                                                --><input id="radio3" name="estrellas" value="3" type="radio"><!--
+                                                --><label for="radio3">★</label><!--
+                                                --><input id="radio4" name="estrellas" value="2" type="radio"><!--
+                                                --><label for="radio4">★</label><!--
+                                                --><input id="radio5" name="estrellas" value="1" type="radio"><!--
+                                                --><label for="radio5">★</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 offset s1">
+                                            <textarea id="mensaje"  name="mensaje_" class="materialize-textarea" type="text" maxlength="101" > </textarea>
+                                    </div>
+                                </div>
+                                <button class="btn waves-effect orange darken-4" type="submit" id="button" > Enviar <i class="material-icons right" ></i>
+                                </button>
+                            </form>
+                         
+                    </span></div>
+                    <div class="col s6 offset-s1 l1 offset-l1 forms"><span class="black-text text-darken-2">
+                        <h2> Valoraciones  </h2>
+                        <div class="Valorar">
+                            <!---<div class="row">
+                                <div class="row">
+                                    <div class="col s5">
+                                        <div id="Name" ></div>
+                                    </div>-->
+                                    <!---<div class="col s6">
+                                        <div id="Date"></div>
+                                    </div>
+                                    <div class="col s1">
+                                        <div id="Estrella"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div id="Message" ></div> 
+                                    </div>
+                                </div>
+                            </div>-->
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="col s6">
+                            <p id="Informacion"></p>
+                        </div>
+                    </span></div>
+                </div>
+            </nav>
+            
+        </body>
+    </html>
+    
