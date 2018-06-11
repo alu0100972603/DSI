@@ -1,12 +1,10 @@
 <meta charset="UFT8">
-<?php
-                                   
 
-    ini_set ('error_reporting', E_ALL & ~E_NOTICE);
+<?php
+ini_set ('error_reporting', E_ALL & ~E_NOTICE);
    include "conexion.php";
     
-    $Conexion = crear_conexion();    
-      
+    $Conexion = crear_conexion();  
     
     if ($Conexion)
     {
@@ -22,6 +20,10 @@
         if (!mysqli_query($Conexion, $SQL))
         {
             echo "Error: " . mysqli_error($Conexion);
+        }else{
+            echo "<script>
+                window.location.href='Valorar.html';
+                </script>";
         }
         
             
@@ -32,4 +34,4 @@
         die("Error al conectar con la base de datos.");
  }
 
- }
+?>
