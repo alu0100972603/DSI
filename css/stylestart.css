@@ -9,21 +9,16 @@ input[type = "radio"]{
 label {
     color:black;
 }
-.clasificacion{
-    direction: rtl;
-    position: absolute;
-    left: 220px;
-    top: 465px;
-}
+
 label:hover,label:hover ~ label{
     color:orange;
+    cursor: pointer;
 }
 input[type = "radio"]:checked ~ label{
     color:orange;
 }
-.Valorar p{
-    font-size:15px;
-    margin: 3px 0 3px 0;
+.clasificacion p{
+     font-size:15px;
 }
 
 
