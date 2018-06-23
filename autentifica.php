@@ -35,8 +35,7 @@
     }
     else{
         echo "<script>
-                alert('No se ha podido iniciar sesion.');
-                window.location.href='index.html';
+                window.location.href='fail.html';
               </script>";
     }
 

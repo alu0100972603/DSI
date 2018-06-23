@@ -1,0 +1,8 @@
+.failure p, .failure{
+    font-size:14px;
+    display: none;
+}
+
+.failure{
+    border-radius: 10px;
+}

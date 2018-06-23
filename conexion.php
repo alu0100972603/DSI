@@ -1,5 +1,3 @@
-<meta charset="UFT8">
-
 <?php
 
     // Establecer la conexiÃ³n

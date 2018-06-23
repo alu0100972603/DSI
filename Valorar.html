@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
-    <html>
-        <head lang="es">
+    <html lang="es">
+        <head >
             <link rel="icon" href="img/logo.png">
             <title> Valoraciones - FastFood </title>
             <meta charset="utf-8">
@@ -8,70 +8,93 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
             <script type="" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
             <link rel="stylesheet" href="css/style.css">
+             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="css/stylestart.css">
+            <link rel="stylesheet" href="css/error.css">
             <script type="" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script type="text/javascript" src="javascripts/Validar_valorar.js"></script>
+            <script type="text/javascript" src="javascripts/valorar.js"></script>
             <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
         </head>
 		
         <body class="grey lighten-3">
             <nav>
                  <div class="nav-wrapper">
-                    <a href="welcome.html" class="brand-logo">
+                    <a tabindex="-1" href="welcome.html" class="brand-logo">
                         <div class="row valign-wrapper">
                             <div class="col"> 
                                 <div class="logo"></div>
                             </div>
                             <div class="col"> 
-                                <h1 id="navtitle"> FastFood</h1>
+                                <h1 id="navtitle" lang="en"> FastFood</h1>
                             </div>
                         </div>
                     </a>
-                    <ul id="nav-movile" class="right hide-on-med-and-down">
-                        <li><a  href="ayuda/ayuda.html">Ayuda </a></li>
-                        <li><a  href="contacto.html">Contacto </a></li>
-                    </ul>    
                 </div>
-                <div class="row contenido">
-                    <div class="col s10 offset-s1 l3 offset-l1 forms black-text">
+            </nav>
+            
+                <div class="row">
+                    <div class="col s10 offset-s1 l4 offset-l1 forms_v black-text private">
                         <div class="row"> 
-                            <div class="col offset-s1"> 
-                                <h2> Â¿QuÃ© opinas de fast Food? </h2>
+                            <div class="col s10 offset-s1">
+                                <div class="row center-align">
+                                    <h2> ¿Qué opinas de <span lang="en">FastFood</span>? </h2>
+                                    <div class="small" id="obligatorio">Los campos marcados con * son obligatorios </div>
+                                    <div class="col s12 red failure">
+                                        <p id="f1"> El campo <em> nombre</em> está vacío </p>
+                                        <p id="f2"> ¿Has olvidado escribir un <em> mensaje</em>? </p>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <form action="insertarvaloracion.php" method="post" name="Formulario"  onsubmit="return validate_form()">
                                         <div class="row">
-                                            <div class="col s10 offset"> 
-                                                Nombre:
-                                                <input type="text" id="nombre" name="nombre_"  >
+                                            <div class="col s1 required"> * </div>
+                                            <div class="col s11"> 
+                                                <label for="nombre"> Nombre: </label>
+                                                <input aria-describedby="obligatorio" type="text" id="nombre" name="nombre_" data-length="10" maxlength="10" >
                                             </div>
                                         </div>
+                                        
                                         <div class="row">
-                                            <div class="col s6">
-                                                    Mensaje: 
+                                            <div class="col s1 required"> * </div>
+                                            <div class="col s4">
+                                                <label for="mensaje"> Mensaje: </label> 
                                             </div>
-                                            <div class="col s6">
-                                                <div class="clasificacion">
-                                                        <input id="radio1" name="estrellas" value="1" type="radio"><!--
-                                                        --><label for="radio1">â˜…</label><!--
-                                                        --><input id="radio2" name="estrellas" value="2" type="radio"><!--
-                                                        --><label for="radio2">â˜…</label><!--
-                                                        --><input id="radio3" name="estrellas" value="3" type="radio"><!--
-                                                        --><label for="radio3">â˜…</label><!--
-                                                        --><input id="radio4" name="estrellas" value="4" type="radio"><!--
-                                                        --><label for="radio4">â˜…</label><!--
-                                                        --><input id="radio5" name="estrellas" value="5" type="radio"><!--
-                                                        --><label for="radio5">â˜…</label>
+                                            
+                                            <div class="col s7 right-align">
+                                                    <span>
+                                                        <input aria-describedby="obligatorio" id="star1" class="star" type="image" src="img/star2.svg" alt="Calificar con una estrella"/>
+                                                    </span>
+                                                    <span>
+                                                        <input aria-describedby="obligatorio" id="star2" class="star" type="image" src="img/star.svg" alt="Calificar con dos estrellas"/>
+                                                    </span>
+                                                    <span>
+                                                        <input aria-describedby="obligatorio" id="star3" class="star" type="image" src="img/star.svg" alt="Calificar con tres estrellas"/>
+                                                    </span>
+                                                    <span>
+                                                        <input aria-describedby="obligatorio" id="star4" class="star" type="image" src="img/star.svg" alt="Calificar con cuatro estrellas"/>
+                                                    </span>
+                                                    <span>
+                                                        <input aria-describedby="obligatorio" id="star5" class="star" type="image" src="img/star.svg" alt="Calificar con cinco estrellas"/>
+                                                    </span>
+                                                    
                                                 </div>
                                             </div>
-                                        </div>
+                                        
+                                        
                                         <div class="row">
-                                            <div class="col s10">
-                                                    <textarea id="mensaje"  name="mensaje_" class="materialize-textarea" type="text" maxlength="101" > </textarea>
+                                            <div class="col s11 offset-s1">
+                                                    <textarea id="mensaje"  name="mensaje_" class="materialize-textarea" data-length="100" maxlength="100" ></textarea>
                                             </div>
+                                            <textarea title="estrellas" name="estrellas_" id="estrellas" style="visibility: hidden"></textarea>
                                         </div>
-                                        <button class="btn waves-effect orange darken-4" type="submit" id="button" > Enviar <i class="material-icons right" ></i>
-                                        </button>
+                                        
+                                        <div class="row center-align">
+                                            <button class="btn-large waves-effect orange darken-4" type="submit" >Enviar
+                                            </button>
+                                        </div>
                                     </form>
+
                                 </div>
                             </div>
                         </div>
@@ -83,13 +106,15 @@
                             <div class="container">
                                 <h2> Valoraciones  </h2>
                                 <div class="Valorar">
-                                    <p id="Informacion"></p>
+                                    <p aria-live="polite" id="Informacion"></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </nav>
-            
         </body>
     </html>
+    
+
+    
+		

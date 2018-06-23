@@ -13,56 +13,66 @@
         <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
         <script src="javascripts/welcome.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-    </head> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">      
+</head> 
 
     <body id="wc">
         <nav>
             <div class="nav-wrapper">
-                <a href="welcome.html" class="brand-logo">
-                    <div class="row valign-wrapper">
+                <a href="welcome.html" class="brand-logo" tabindex="-1">
+                    <div class="row valign-wrapper" >
                         <div class="col"> 
                             <div class="logo"></div>
                         </div>
                         <div class="col"> 
-                            <h1 id="navtitle"> FastFood</h1>
+                            <h1 id="navtitle" lang="en"> FastFood</h1>
                         </div>
                     </div>
                 </a>
                   
-                <ul id="nav-movile" class="right">
-                    <li class=" hide-on-med-and-down"><a  href="ayuda/ayuda.html">Ayuda </a></li>
-                    <li class=" hide-on-med-and-down"><a  href="contacto.html">Contacto </a></li>
-                    <li><a  href="cerrar_sesion.php"> Salir </a></li>
+                <ul id="nav-movile" class="right" role="tree" tabindex="0">
+                    <li role="treeitem" class=" hide-on-med-and-down"><a  href="ayuda/ayuda.html">Ayuda </a></li>
+                    <li role="treeitem" class=" hide-on-med-and-down"><a  href="contacto.html">Contacto </a></li>
+                    <li><a  href="cerrar_sesion.php"><i class="fas fa-power-off fa-lg" ></i>  Salir </a></li>
                 </ul>
                 
                 
             </div>
         </nav>
-        <div class="container">
             <div class="row">
-                
-                <div class="col s12 m8 offset-m2 l6 offset-l3 grey darken-4 center-align">
-                    <p id="welcome">Bienvenido</p>
-                </div>
-                
-                <div class="col s12 m8 offset-m2 l6 offset-l3 white" id="promo">
-                    <div class="row center-align">
-                        <div>
-                            <span id="promo1">30%</span> <span id="promo3"> de </span> 
+                <br>
+                <div class="col s10 offset-s1 m8 offset-m2 l4 offset-l4"> 
+                    <div class="row grey darken-4 center-align" id="welcome">
+                        <p>Bienvenido</p>
+                    </div>
+
+                    <div class="row white" id="promo" aria-labelledby="welcome">
+                        <div class="row center-align">
+                            <div>
+                                <span id="promo1">30%</span> <span id="promo3"> de </span> 
+                            </div>
+                            <div>
+                                <span id="promo2">descuento</span> 
+                            </div>
+                            <div>
+                                <span id="promo4">con tu carné de estudiante</span> 
+                            </div>
                         </div>
-                        <div>
-                            <span id="promo2">descuento</span> 
-                        </div>
-                        <div>
-                            <span id="promo4">con tu carné de estudiante</span> 
+
+                        <div class="row center-align">
+                            <a class="button waves-effect waves-light btn-large grey darken-4" href="menu.html">Hacer un pedido</a>
                         </div>
                     </div>
-                    
+                </div>
+                
+                
+                
+                <div class="col s10 offset-s1 m8 offset-m2 l2 offset-l1 white center-align" id="promo">
+                    <h2 id="val"> ¿Qué te parece <span lang="en"> FastFood </span>?</h2>
                     <div class="row center-align">
-                        <a class="button waves-effect waves-light btn-large grey darken-4" href="menu.html">Hacer un pedido</a>
+                        <a class="button waves-effect waves-light btn-small grey darken-4" href="Valorar.html">Valorar</a>
                     </div>
                 </div>
             </div>
-        </div>
     </body>
 </html>

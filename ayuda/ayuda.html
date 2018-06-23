@@ -18,7 +18,7 @@
             <nav class="nav-extended">
                 <div class="nav-wrapper">
                     <a href="../welcome.html" class="brand-logo">
-                        <div class="row valign-wrapper">
+                        <div class="row valign-wrapper" tabindex="-1">
                             <div class="col"> 
                                 <div class="logo"></div>
                             </div>
@@ -27,18 +27,14 @@
                             </div>
                         </div>
                     </a>
-
-                    <ul id="nav-movile" class="right hide-on-med-and-down">
-                    <li><a  href="../contacto.html">Contacto </a></li>
-                    </ul> 
                 </div>
             
             
                 <div class="nav-content">
-                    <ul class="tabs tabs-transparent">
-                        <li class="tab"><a href="#Ayuda">Ayuda</a></li>
-                        <li class="tab"><a href="#Preguntasfrecuentes">Preguntas frecuentes</a></li>
-                        <li class="tab"><a href="#terminosycondiciones">Términos y Condiciones</a></li>
+                    <ul class="tabs tabs-transparent" role="tree" tabindex="0">
+                        <li class="tab" role="treeitem"><a href="#Ayuda">Ayuda</a></li>
+                        <li class="tab" role="treeitem"><a href="#Preguntasfrecuentes">Preguntas frecuentes</a></li>
+                        <li class="tab" role="treeitem"><a href="#terminosycondiciones">Términos y Condiciones</a></li>
                     </ul>
                 </div>
             </nav>
@@ -60,17 +56,17 @@
                        <h3 id="Preguntasfrecuentes" class="anchor"> Preguntas frecuentes </h3>
                     </div>
                     <div class="row">
-                        <h4> ¿Qué es FastFood? </h4>
-                        <p>  FastFood es la aplicación web del restaurante FastFood que permite a los usuarios, una vez en el establecimiento, realizar los pedidos y pagar desde sus teléfonos móvil.</p>
+                        <h4 id="Titulo"> ¿Qué es FastFood? </h4>
+                        <p aria-labelledby="Titulo">  FastFood es la aplicación web del restaurante FastFood que permite a los usuarios, una vez en el establecimiento, realizar los pedidos y pagar desde sus teléfonos móvil.</p>
                     </div>
                     <div class="row">
-                        <h4> ¿Cómo hacer login? </h4>
-                        <p> Para hacer login hay que disponer de una cuenta, es decir, tienes que haberte registrado en FastFood con anterioridad. Sólo tienes que usar los mismos datos que usaste para crear una cuenta. Deberás insertarlos nuevamente en la página web e iniciar sesión.</p>
+                        <h4 id="Titulo2"> ¿Cómo hacer login? </h4>
+                        <p aria-labelledby="Titulo2"> Para hacer login hay que disponer de una cuenta, es decir, tienes que haberte registrado en FastFood con anterioridad. Sólo tienes que usar los mismos datos que usaste para crear una cuenta. Deberás insertarlos nuevamente en la página web e iniciar sesión.</p>
                     </div>
                     <div class="row">
-                        <h4> ¿Cómo crear una cuenta? </h4>
-                        <p> Puedes acceder a FastFood la página principal de FastFood.
-                        <p> En la página de inicio tendrás la posibilidad de registrarte en la opción “Crear cuenta” introduciendo tu nombre, correo electrónico y una contraseña. Una vez finalizado el proceso de registro satisfactoriamente, podrás disfrutar de FastFood sin ningún problema.</p>
+                        <h4 id="Titulo3"> ¿Cómo crear una cuenta? </h4>
+                        <p aria-labelledby="Titulo3"> Puedes acceder a FastFood la página principal de FastFood.
+                        <p aria-labelledby="Titulo3"> En la página de inicio tendrás la posibilidad de registrarte en la opción “Crear cuenta” introduciendo tu nombre, correo electrónico y una contraseña. Una vez finalizado el proceso de registro satisfactoriamente, podrás disfrutar de FastFood sin ningún problema.</p>
                     </div>
                 </div>
             </div>
@@ -80,9 +76,9 @@
                     <div class="row">
                         <h3 class="anchor" id="terminosycondiciones"> Términos y Condiciones de Uso </h3>
                     
-                        <p> <strong>Esta página web se ha desarrollado con fines educativos y los siguientes términos y condiciones de uso son ficticios y no aplicables.</strong></p>
+                        <p aria-labelledby="terminosycondiciones"> <strong>Esta página web se ha desarrollado con fines educativos y los siguientes términos y condiciones de uso son ficticios y no aplicables.</strong></p>
                         
-                        <div id="terms" class="left-align">
+                        <div aria-labelledby="terminosycondiciones" id="terms" class="left-align">
                         
                             INFORMACIÓN GENERAL
 

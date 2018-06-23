@@ -98,7 +98,11 @@ $(document).ready(function(){
     });
 
     var carro = new Carrito()
-        
+    
+    $("footer button").click( function(){
+        window.location.href = "gracias.html";
+    });
+    
     $("button").click( function(){
         
         var id     = $(this).attr('name')
@@ -115,6 +119,8 @@ $(document).ready(function(){
         $("footer").css("visibility", "visible");
 
     });
-    
-    
+        
 });
+
+
+	

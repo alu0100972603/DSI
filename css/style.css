@@ -151,7 +151,12 @@ a:visited{
     font-family: 'Alfa Slab One', cursive;
 }
 
+#val{
+    font-size: 25px;
+}
+
 #welcome{
+    padding:5px;    
     color:white;
 }
 
@@ -201,5 +206,5 @@ button:focus{
 .small{
     position:relative;
     top:-12px;
-    font-size: 0.66em;
+    font-size: 0.8em;
 }

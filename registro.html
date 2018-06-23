@@ -11,6 +11,7 @@
         <script type="text/javascript" src="javascripts/validar_registro.js"></script>
         <script type="text/javascript" src="javascripts/class_email.js"></script>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/error.css">
         <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     </head>
 
@@ -19,20 +20,15 @@
             <div class="nav-wrapper">
 
                 <a href="welcome.html" class="brand-logo">
-                    <div class="row valign-wrapper">
+                    <div class="row valign-wrapper" tabindex="-1">
                         <div class="col"> 
                             <div class="logo"></div>
                         </div>
                         <div class="col"> 
-                            <h1 id="navtitle"> FastFood</h1>
+                            <h1 id="navtitle" lang="en"> FastFood</h1>
                         </div>
                     </div>
-                </a>
-
-                <ul id="nav-movile" class="right hide-on-med-and-down">
-                <li><a  href="ayuda/ayuda.html"> Ayuda </a></li>
-                <li><a  href="contacto.html">Contacto </a></li>
-                </ul>    
+                </a>  
             </div>
         </nav>
 
@@ -40,7 +36,7 @@
             <!-- Título de la página -->
             <div class="row">
                 <div class="col s12 center-align flow-text">
-                    <h2> Tu cuenta en FastFood </h2>    
+                    <h2 id="cuenta"> Tu cuenta en FastFood </h2>    
                 </div>
 
             </div>                 
@@ -53,15 +49,15 @@
                     <div class=row>
 
                         <!-- Información personal -->                  
-                        <div class="col s10 offset-s1 l5 flow-text">
+                        <div class="col s12 l5 flow-text">
                             <div class="row">
-                                <h3>Datos Personales</h3>
-                                <div class="small">Los campos marcados con * son obligatorios </div>
+                                <h3 aria-labelledby="cuenta">Datos Personales</h3>
+                                <div class="small" id="obligatorio">Los campos marcados con * son obligatorios </div>
 
                                 <div class="col s1 required"> * </div>
                                 <div class="col s11">
                                     <div class="input-field">
-                                        <input id="name" name="name_" type="text" class="validate">
+                                        <input aria-describedby="obligatorio" id="name" name="name_" type="text" class="validate">
                                         <label for="name">Nombre</label>
                                     </div>
                                 </div>
@@ -69,7 +65,7 @@
                                 <div class="col s1 required"> * </div>
                                 <div class="col s11">
                                     <div class="input-field">
-                                        <input id="mail" name="mail_" type="email" class="validate">
+                                        <input aria-describedby="obligatorio" id="mail" name="mail_" type="email" class="validate">
                                         <label for="mail">Email</label>
                                     </div>
                                 </div>
@@ -77,7 +73,7 @@
                                 <div class="col s1 required"> * </div>
                                 <div class="col s11">
                                     <div class="input-field">
-                                        <input id="Password" name="Password_" type="password" class="validate">
+                                        <input aria-describedby="obligatorio" id="Password" name="Password_" type="password" class="validate">
                                         <label for="Password">Contraseña</label>
                                     </div>
                                 </div>
@@ -85,16 +81,24 @@
                                 <div class="col s1 required"> * </div>
                                 <div class="col s11">
                                     <div class="input-field">
-                                        <input id="Repetir_Password" type="password" class="validate">
+                                        <input aria-describedby="obligatorio" id="Repetir_Password" type="password" class="validate">
                                         <label for="Repetir_Password">Repite la contraseña</label>
                                     </div>
                                 </div>
-                            
+                                <div class="row">
+                                <div class="col s11 offset-s1 red failure">
+                                    <p id="f1"> Debe aceptar los Términos y Condiciones de Uso </p>
+                                    <p id="f2"> Rellene todos los campos del formulario </p>
+                                    <p id="f3"> Formato de e-mail incorrecto </p>
+                                    <p id="f4"> Las contraseñas introducidas no coinciden</p>
+                                </div>
+                        </div>
                             </div>
+                            
                         </div>
 
                         <!-- Alérgenos -->
-                        <div class="col s10 offset-s1 l5 offset-l2 flow-text">
+                        <div aria-labelledby="cuenta" class="col s12 l5 offset-l2 flow-text">
                             <div class="row s12"> 
                                 <h3>Alérgenos</h3> 
                                 <p> Se ocultarán los alimentos que tengan alguno de los alérgenos que selecciones</p>
@@ -158,168 +162,10 @@
                     <!-- Botón enviar -->
                     <div class=row>
                         <div class="col s12 center-align flow-text">
-                            <button class="btn waves-effect btn-large deep-orange accent-4" type="submit">
+                            <button class="btn waves-effect btn-large orange darken-4" type="submit">
                                 ¡Listo!
                             </button>
                         </div>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </body>
-</html><!DOCTYPE HTML>
-<html lang="es">
-    <head>
-        <title> Registro - FastFood </title>
-        <link rel="icon" href="img/logo.png">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-        <script type="text/javascript" language="javascript" src="javascripts/validar_registro.js"></script>
-        <script type="text/javascript" language="javascript" src="javascripts/class_email.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-
-    <body class="grey lighten-3">
-        <nav>
-            <div class="nav-wrapper yellow darken-4">
-
-                <a href="welcome.html" class="brand-logo">
-                    <h1 id="navtitle">
-                        <div class="logo"></div>
-                        FastFood
-                    </h1>
-                </a>
-
-                <ul id="nav-movile" class="right hide-on-med-and-down">
-                <li><a  href="ayuda/ayuda.html"> Ayuda </a></li>
-                <li><a  href="contacto.html">Contacto </a></li>
-                </ul>    
-            </div>
-        </nav>
-
-        <div class=container>
-            <!-- Título de la página -->
-            <div class="row">
-                <div class="col s12 center-align"><span class=flow-text>
-                    <h2> Tu cuenta en FastFood </h2>    
-                </span></div>
-
-            </div>                 
-
-            <!-- Formulario -->
-            <div class="row">
-
-                <form action="insertar.php" method="post" name="Formulario"  onsubmit="return validate_form()">
-
-                    <div class=row>
-
-                        <!-- Información personal -->
-                        <div class="col s10 offset-s1 l5"><span class="flow-text">
-
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="name" name="name_" type="text" class="validate">
-                                    <label for="name">Nombre</label>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="mail" name="mail_" type="email" class="validate">
-                                    <label for="mail">Email</label>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="Password" name="Password_" type="password" class="validate">
-                                    <label for="Password">Contraseña</label>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="Repetir_Password" type="password" class="validate">
-                                    <label for="Repetir_Password">Repite la constraseña</label>
-                                </div>
-                            </div>
-
-                        </span></div>
-
-                        <div class="col s1"><span class="flow-text"> </span></div>
-
-                        <!-- Alérgenos -->
-                        <div class="col s10 offset-s1 l6 offset-l1"><span class="flow-text"> 
-                            <h4>Alérgenos</h4>
-                            <p> Los alimentos que tengan alguno de los alérgenos que selecciones no se mostrarán en el menú</p>
-                            <div class=row>
-                                <!-- Columna izquierda-->
-                                <div class="col s6"><span class="flow-text">
-                                    <label>
-                                        <input type="checkbox" name="alergeno[]" value="gluten" />
-                                        <span> Gluten </span>
-                                    </label><br>
-                                    <label>
-                                        <input type="checkbox" name="alergeno[]" value="crustaceos" />
-                                        <span> Crustáceos </span>
-                                    </label><br>
-                                    <label>
-                                        <input type="checkbox" name="alergeno[]" value="gluten" />
-                                        <span> Huevo </span>
-                                    </label><br>
-                                    <label>
-                                        <input type="checkbox" name="alergeno[]" value="pescado" />
-                                        <span> Pescado </span>
-                                    </label><br>
-                                </span></div>
-
-                                <!-- Columna derecha -->    
-                                <div class="col s6"><span class="flow-text">
-                                    <label>
-                                        <input type="checkbox" name="alergeno[]" value="cacahuetes" />
-                                        <span> Cacahuetes </span>
-                                    </label><br>
-                                    <label>
-                                        <input type="checkbox" name="alergeno[]" value="soja" />
-                                        <span> Soja </span>
-                                    </label><br>
-                                    <label>
-                                        <input type="checkbox" name="alergeno[]" value="lacteos" />
-                                        <span> Lácteos </span>
-                                    </label><br>
-                                    <label>
-                                        <input type="checkbox" name="alergeno[]" value="frutossecos" />
-                                        <span> Frutos secos </span>
-                                    </label><br>
-                                </span></div>
-                            </div>
-                        </span> </div>
-
-                    </div>
-
-                    <div class="row">
-                        <div class="col s12"><span class="flow-text">
-                            <div class="row center-align">
-                                <label>
-                                    <input id="terms" type="checkbox" name="terminosycondiciones" value="terminosycondiciones" />
-                                    <span> He leído y acepto los <a href="ayuda/ayuda.html#terminosycondiciones" target="_blank"> Términos y Condiciones de Uso</a> </span>
-                                </label>
-                            </div>
-                        </span></div>
-                    </div>
-                    
-                    <!-- Botón enviar -->
-                    <div class=row>
-                        <div class="col s12 center-align"><span class="flow-text">
-                            <button class="btn waves-effect btn-large yellow darken-3" type="submit">
-                                ¡Listo!
-                                <i class="material-icons right"></i>
-                            </button>
-                        </span></div>
                     </div>
 
                 </form>

@@ -43,8 +43,7 @@
                     
             }
 
-            echo "<script>
-                    alert('Registro completado exitosamente');
+            echo "<script>;
                     window.location.href='index.html';
                 </script>";
         }

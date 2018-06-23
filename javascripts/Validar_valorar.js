@@ -1,38 +1,109 @@
+var estrellas = 1;
+
 $(document).ready(function() {
-    $.ajax({
-        url:'Mostrar.php',
-        type:"POST"
-    }).done(function(response){
-        myObj = JSON.parse(response);
-        var txt="";
+    
+    $("#star1").click(function(){
+        estrellas = 1
+        $("#star1").attr("src", "img/star2.svg")
+        $("#star2").attr("src", "img/star.svg")
+        $("#star3").attr("src", "img/star.svg")
+        $("#star4").attr("src", "img/star.svg")
+        $("#star5").attr("src", "img/star.svg")
+        return false;
+    });
+    
+    $("#star2").click(function(){
+        estrellas = 2
+        $("#star1").attr("src", "img/star2.svg")
+        $("#star2").attr("src", "img/star2.svg")
+        $("#star3").attr("src", "img/star.svg")
+        $("#star4").attr("src", "img/star.svg")
+        $("#star5").attr("src", "img/star.svg")
+        return false;
+    });
+    
+    $("#star3").click(function(){
+        estrellas = 3
+        $("#star1").attr("src", "img/star2.svg")
+        $("#star2").attr("src", "img/star2.svg")
+        $("#star3").attr("src", "img/star2.svg")
+        $("#star4").attr("src", "img/star.svg")
+        $("#star5").attr("src", "img/star.svg")
+        return false;
+    });
+    
+    $("#star4").click(function(){
+        estrellas = 4
+        $("#star1").attr("src", "img/star2.svg")
+        $("#star2").attr("src", "img/star2.svg")
+        $("#star3").attr("src", "img/star2.svg")
+        $("#star4").attr("src", "img/star2.svg")
+        $("#star5").attr("src", "img/star.svg")
+        return false;
+    });
+    
+    $("#star5").click(function(){
+        estrellas = 5
+        $("#star1").attr("src", "img/star2.svg")
+        $("#star2").attr("src", "img/star2.svg")
+        $("#star3").attr("src", "img/star2.svg")
+        $("#star4").attr("src", "img/star2.svg")
+        $("#star5").attr("src", "img/star2.svg")
+        return false;
+    });
+    
+    $.get('Mostrar.php', function (data) 
+    {
+        myObj = JSON.parse(data);
+        
+        var txt = "";
         txt += "<div>"
-        for (x in myObj) {
-            var nestre=myObj[x].estrellas;
-            txt += "<div style='font-weight: bold;'><span>" + myObj[x].nombre + "</span>";
-            txt += "<span style=' margin-top: -30px; margin: 3px 0 3px 0;'>&nbsp;&nbsp;&nbsp;" + myObj[x].fecha  + "</span>&nbsp;";
-			
-            for(var i=0;i<nestre;i++){
-                txt += "<span>" + "â˜…" + "</span>";
-            }
-            txt+="</div>";
-            txt += "<div style='margin-top: -30px;margin-bottom:15px; line-height:1.4;font-weight: normal;'><p>" + myObj[x].mensaje + "</p></div>" ;
-            if(myObj[x].mensaje.length == 0 ){
-                      txt+= "<div style='margin-top: -30px;margin-bottom:15px;'><span>" + "</span></div>";
-            }
+        
+        for (x in myObj) 
+        {
+            var n_estre = myObj[x].estrellas;
+            
+            txt += "<div class='row val'> <div class='col s12'> "
+            txt += "<div class='row message_head val'>"
+            txt += "<div class='col s4'>" + myObj[x].nombre + "</div>";
+            txt += "<div class='col s4 offset-s1 right-align'>" + myObj[x].fecha + "</div>";
+            txt += "<div class='col s3 right-align'>"
+            txt += "<img class='star_rating' src='img/" + n_estre + "star.png' alt='Calificado con " + n_estre +  " estrellas'>"
+            txt += "</div></div>"
+            txt += "<div class='row val'>"
+            txt += "<div class='col s12 mensaje'>" + myObj[x].mensaje + "</div>" ;
+            txt += '</div></div></div>'
         }
         txt += "</div>"        
         document.getElementById("Informacion").innerHTML = txt;
+        
     });
+    
 });
+
 function validate_form()
 {
-    var nombre = document.forms["Formulario"]["nombre"].value;
-    var mensaje = document.forms["Formulario"]["mensaje"].value;
-    var estrellas = document.forms["Formulario"]["estrellas"].value;
-    if((nombre.length == 0) || (mensaje.length== 0) || (estrellas.length == 0))
-	{
-		alert("Rellene todos los campos incluida la puntuaciÃ³n de estrellas");
-		return false;
-	}
+    $(".failure").css("display", "none");
+    $(".failure p").css("display", "none");
+    
+    var nombre    = $("#nombre").val()
+    var mensaje   = $("#mensaje").val()
+    
+    if(nombre.length == 0) 
+    {
+        $(".failure").css("display", "block");
+        $("#f1").css("display", "block");
+        return false;
+    }
+    
+    if(mensaje.length == 0) 
+    {
+        $(".failure").css("display", "block");
+        $("#f2").css("display", "block");
+        return false;
+    }
+    
+    $("#estrellas").val(estrellas);
     return true;
 }
+

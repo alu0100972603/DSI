@@ -10,7 +10,7 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
     {
         $Name     = $_REQUEST["nombre_"];
         $Mensaje = $_REQUEST["mensaje_"];
-        $Estrellas = $_REQUEST["estrellas"];
+        $Estrellas = $_REQUEST["estrellas_"];
         $Fecha =  date("Y-m-d");
         
         $SQL  = "insert into Chat";

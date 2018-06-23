@@ -1,5 +1,8 @@
 function validate_form()
 {
+    $(".failure").css("display", "none");
+    $(".failure p").css("display", "none");
+    
     var nombre  = document.forms["Formulario"]["name"].value;
     var email   = document.forms["Formulario"]["mail"].value;
     var contra  = document.forms["Formulario"]["Password"].value;
@@ -10,22 +13,27 @@ function validate_form()
     
     if (terms == 0)
     {
-        alert("Debe aceptar los Términos y Condiciones de Uso para continuar");
+        $(".failure").css("display", "block");
+        $("#f1").css("display", "block");
+        
         return false;
     }
     else if((nombre.length == 0) || (email.length == 0) || (contra.length == 0) || (contra2.length == 0))
     {
-        alert("Rellene todos los campos");
+        $(".failure").css("display", "block");
+        $("#f2").css("display", "block");
         return false;
     }
     else if(v_email.validate_Email() == false)
     {
-        alert("Formato e-mail incorrecto.");
+        $(".failure").css("display", "block");
+        $("#f3").css("display", "block");
         return false;
     }
     else if(contra2 != contra)
     {
-        alert("Las contraseñas introducidas no coinciden");
+        $(".failure").css("display", "block");
+        $("#f4").css("display", "block");
         return false;
     }
     return true;

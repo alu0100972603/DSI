@@ -1,5 +1,10 @@
 <?php
-    $conn = new mysqli("sql305.epizy.com",  "epiz_21950536", "ProyectoUYA18", "epiz_21950536_FastFood");
+    
+    ini_set ('error_reporting', E_ALL & ~E_NOTICE);
+    include "conexion.php";
+
+    $conn = crear_conexion();
+
     $result = $conn->query("select * from Chat order by id desc");
     $outp = array();
     $outp = $result->fetch_all(MYSQLI_ASSOC);
